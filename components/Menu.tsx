@@ -7,7 +7,7 @@ import {
   NavigationMenuList,
   NavigationMenuLink,
 } from "@/components/ui/navigation-menu";
-import { Home, Briefcase, Github } from "lucide-react";
+import { Home, FileText, Github } from "lucide-react";
 
 export default function Menu() {
   return (
@@ -16,25 +16,15 @@ export default function Menu() {
         <NavigationMenu>
           <NavigationMenuList className="flex items-center gap-4">
 
-            {/* Site Title */}
+            {/* Home = Payroll */}
             <NavigationMenuItem>
-              <span className="font-semibold text-lg">Final Exam</span>
+              <Link href="/" className="flex items-center gap-2 font-semibold">
+                <Home className="h-5 w-5" />
+                Home
+              </Link>
             </NavigationMenuItem>
 
-            {/* Home (Payroll Calculator) */}
-            <NavigationMenuItem>
-              <NavigationMenuLink asChild>
-                <Link
-                  href="/"
-                  className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
-                >
-                  <Home className="h-4 w-4" />
-                  Home
-                </Link>
-              </NavigationMenuLink>
-            </NavigationMenuItem>
-
-            {/* Exam 1 – Law Firm (EXTERNAL) */}
+            {/* Exam 1 = Law Firm site */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <a
@@ -43,13 +33,13 @@ export default function Menu() {
                   rel="noopener noreferrer"
                   className="flex items-center gap-2 rounded-md px-3 py-2 text-sm font-medium hover:bg-muted"
                 >
-                  <Briefcase className="h-4 w-4" />
+                  <FileText className="h-4 w-4" />
                   Exam 1
                 </a>
               </NavigationMenuLink>
             </NavigationMenuItem>
 
-            {/* Git 1 – GitHub (EXTERNAL) */}
+            {/* Git 1 = Law Firm GitHub */}
             <NavigationMenuItem>
               <NavigationMenuLink asChild>
                 <a
